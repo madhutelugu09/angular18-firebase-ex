@@ -1,0 +1,15 @@
+<div class="login-container">
+    <h2>Login with Phone Number</h2>
+    <div id="recaptcha-container"></div>
+    
+    <form [formGroup]="otpForm" (ngSubmit)="sendOtp()">
+      <input type="text" placeholder="Enter phone number" formControlName="phoneNumber" value="+917893979899" />
+      <button type="submit">Send OTP</button>
+    </form>
+  
+    <form [formGroup]="otpForm" (ngSubmit)="verifyOtp()" *ngIf="confirmationResult">
+      <input type="text" placeholder="Enter OTP" formControlName="otp" />
+      <button type="submit">Verify OTP</button>
+    </form>
+  </div>
+  

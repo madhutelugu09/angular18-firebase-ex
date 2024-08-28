@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  templateUrl: './app.component.html',  // Reference to the external HTML file
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterModule]
 })
-export class AppComponent {
-  title = 'my-angular-firebase-app';
-}
+export class AppComponent {}
